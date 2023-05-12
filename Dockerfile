@@ -1,11 +1,12 @@
 FROM python
 
+RUN pip install --upgrade pip
 RUN pip install flask
 
 RUN mkdir -p /home/app
 
 COPY . /home/myapp
 
-EXPOSE 8080
+EXPOSE 5050
 
 CMD python3 /home/myapp/src/sample-app/sample_app.py
